@@ -1,3 +1,4 @@
+import EmailsSection from "./Emails"
 import { useState } from 'react'
 
 import initialEmails from './data/emails'
@@ -87,7 +88,12 @@ function App() {
           </li>
         </ul>
       </nav>
-      <main className="emails">
+      <EmailsSection
+        filteredEmails={filteredEmails}
+        toggleRead={toggleRead}
+        toggleStar={toggleStar}
+      />
+      {/* <main className="emails">
         <ul>
           {filteredEmails.map((email, index) => (
             <li
@@ -115,7 +121,7 @@ function App() {
             </li>
           ))}
         </ul>
-      </main>
+      </main> */}
     </div>
   )
 }

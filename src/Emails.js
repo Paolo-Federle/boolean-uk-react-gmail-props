@@ -5,12 +5,10 @@ function EmailsSection(props) {
         <main className="emails">
         <ul>
           {props.filteredEmails.map((email, index) => (
-            <OneMail
-            filteredEmails={props.filteredEmails}
+            <OneMail key={index}
             toggleRead={props.toggleRead}
             toggleStar={props.toggleStar}
             email={email}
-            index={index}
           />
           ))}
         </ul>
